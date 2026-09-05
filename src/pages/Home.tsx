@@ -49,7 +49,7 @@ export default function Home() {
             同一场碰撞，<span style={{ color: '#E10600' }}>两种真相</span>。
           </h1>
           <p className="mt-4 max-w-2xl text-zinc-400">
-            针对 F1 争议事件的多视角情报室：时间轴、阵营对峙、FIA 判决书大白话翻译、FastF1
+            针对 F1 赛场事件的多视角情报室：时间轴、阵营对峙、FIA 判决书通俗解读、FastF1
             真实遥测——每一句话都附原始来源。
           </p>
         </div>

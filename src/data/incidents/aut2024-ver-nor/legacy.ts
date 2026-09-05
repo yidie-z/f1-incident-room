@@ -308,7 +308,7 @@ export const fiaDecision = {
   original:
     '"[Verstappen] was approaching turn 3 with [Norris] alongside on his left. Before turning in, [Verstappen] moved to the left, causing a collision with [Norris]. The Stewards determine that [Verstappen] was predominantly at fault."',
   plain:
-    '大白话：诺里斯已经和你并排了（在你左边），你在进弯前又往左挪了一把，把他挤到发生碰撞——所以这次主要怪你。罚 10 秒，驾照扣 2 分。',
+    '通俗解读：诺里斯已经和你并排了（在你左边），你在进弯前又往左挪了一把，把他挤到发生碰撞——所以这次主要怪你。罚 10 秒，驾照扣 2 分。',
   rules: [
     '为何是 10 秒而不是 5 秒：按当年与各车队确认的《驾驶标准指引》，"造成碰撞"的基准处罚就是 10 秒；5 秒档通常用于"迫使对手驶离赛道"等更轻的违规。',
     '为何扣 2 分：造成碰撞属于超级驾照扣分条款中的标准 2 分档。这 2 分让维斯塔潘 12 个月累计来到 8 分（满 12 分禁赛一场），成为他 2025 年"禁赛危机"的起点之一。',

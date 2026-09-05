@@ -1,4 +1,4 @@
-// 共享类型：一个"争议事件页面"所需的全部数据契约。
+// 共享类型：一个"事件页面"所需的全部数据契约。
 // 生成器（tools/generate_incident.py）产出的内容文件遵循此结构。
 
 export type Camp = 'a' | 'b' | 'neutral' | 'fia';

@@ -175,7 +175,7 @@ export const content: IncidentContent = {
       speaker: 'Motorsport.com 赛事报道组',
       role: '专业媒体',
       camp: 'neutral',
-      zh: '一次"蓝撞蓝"的队友相残：干事直接开出 10 秒罚单，没有争议空间。值得注意的是背景——两人当时只排在第 15、16 位，前面只压着凯迪拉克的佩雷兹；争的不是积分，所以这次碰撞的伤害更多是象征性的：本就挣扎的威廉姆斯，唯一的得分希望随阿尔本的底板一起报废了。',
+      zh: '一次"蓝撞蓝"的队友相残：干事直接开出 10 秒罚单，没有争辩空间。值得注意的是背景——两人当时只排在第 15、16 位，前面只压着凯迪拉克的佩雷兹；争的不是积分，所以这次碰撞的伤害更多是象征性的：本就挣扎的威廉姆斯，唯一的得分希望随阿尔本的底板一起报废了。',
       quote:
         '"Sainz was hit with a straightforward 10-second penalty... both Williams drivers were languishing at the bottom of the order in 15th and 16th, only ahead of Cadillac\'s Sergio Perez."',
       tone: '裁决解读',
@@ -208,7 +208,7 @@ export const content: IncidentContent = {
     original:
       '"Carlos Sainz\'s classified position reflects a 10-second time penalty for causing a collision with team mate Alexander Albon." —— FIA 第 64 号成绩文件（Coffee Corner Motorsport 转引）；Motorsport.com 称此为"direct/straightforward 10-second penalty"（径直的 10 秒罚时），塞恩斯本人表示 "It was a fair penalty"（罚得公道）。',
     plain:
-      '大白话：你在 1 号弯内线防守时抱死，把外线的队友撞出比赛——教科书式的"造成碰撞"，按基准罚 10 秒，没有可以从轻的情节。这次和 2025 加拿大站诺里斯撞皮亚斯特里正好相反：那次被撞的车毫发无损，"没有竞技后果"只罚 5 秒；这次阿尔本底板损毁直接退赛，后果实实在在，所以是全额 10 秒。',
+      '通俗解读：你在 1 号弯内线防守时抱死，把外线的队友撞出比赛——教科书式的"造成碰撞"，按基准罚 10 秒，没有可以从轻的情节。这次和 2025 加拿大站诺里斯撞皮亚斯特里正好相反：那次被撞的车毫发无损，"没有竞技后果"只罚 5 秒；这次阿尔本底板损毁直接退赛，后果实实在在，所以是全额 10 秒。',
     rules: [
       '为何是 10 秒而不是 5 秒：造成碰撞的基准处罚就是 10 秒；从轻到 5 秒需要"无直接明显的竞技后果"（如 2025 加拿大站），而本站阿尔本因碰撞损伤退赛，不符合从轻条件。',
       '实际影响约等于零：塞恩斯本来就在积分区外，10 秒罚时后仍列第 16 名完赛——罚单是象征性的，真正的损失由阿尔本和车队承担。',

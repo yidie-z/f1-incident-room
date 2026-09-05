@@ -303,7 +303,7 @@ export const content: IncidentContent = {
     original:
       '"Cars 33 [Verstappen] and 44 [Hamilton] entered turn 9 with Car 33 in the lead and Car 44 slightly behind and on the inside. Car 44 was on a line that did not reach the apex of the corner, with room available to the inside. When Car 33 turned into the corner, Car 44 did not avoid contact and the left front of Car 44 contacted the right rear of Car 33. Car 44 is judged predominantly at fault."',
     plain:
-      '大白话：进弯时维斯塔潘在前、汉密尔顿稍后但已经并排在内线；汉密尔顿的行车线够不到弯心（内侧其实还有空间可以收得更紧），维斯塔潘拐进弯心时，汉密尔顿没有避开接触——所以这次主要怪汉密尔顿，但不是全怪他。',
+      '通俗解读：进弯时维斯塔潘在前、汉密尔顿稍后但已经并排在内线；汉密尔顿的行车线够不到弯心（内侧其实还有空间可以收得更紧），维斯塔潘拐进弯心时，汉密尔顿没有避开接触——所以这次主要怪汉密尔顿，但不是全怪他。',
     rules: [
       '"主要责任"和"全部责任"是干事的两种措辞档位：认定"主要（predominantly）"而非"全部（wholly）"，意味着干事也认为维斯塔潘"两车都不让"有间接责任——这是汉密尔顿只被罚 10 秒、而不是通过维修区或停站 10 秒的关键。',
       '10 秒罚时在当时属于"造成碰撞"的常见档位；红牛愤怒的点是：汉密尔顿在维修区受罚后依然夺冠，"等于没罚"——霍纳称之为"不痛不痒的处罚（menial penalty）"。',

@@ -36,7 +36,7 @@ export default function EvidenceSection({ decision }: { decision?: FiaDecision }
 
         <div className="rounded-2xl border border-[#E10600]/30 bg-[#E10600]/5 p-6">
           <div className="flex items-center gap-2 text-sm font-semibold text-[#FF6B66]">
-            <Languages className="h-4 w-4" /> 大白话翻译
+            <Languages className="h-4 w-4" /> 通俗解读
           </div>
           <p className="mt-4 text-sm leading-relaxed text-zinc-200">{decision.plain}</p>
           <ul className="mt-4 space-y-3">

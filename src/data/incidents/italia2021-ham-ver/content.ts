@@ -253,7 +253,7 @@ export const content: IncidentContent = {
     original:
       '"The stewards observed on CCTV footage that the driver of car 44 was driving an avoiding line, although his position caused car 33 to go onto the kerb. But further, the stewards observed that car 33 was not at all alongside car 44 until significantly into the entry into turn one. In the opinion of the stewards, this manoeuvre was attempted too late for the driver of car 33 to have \'the right to racing room\'. While car 44 could have steered further from the kerb to avoid the incident, the stewards determined that his position was reasonable and therefore find that the driver of car 33 was predominantly to blame for the incident. In coming to the penalty the stewards emphasise that they have only considered the incident itself and not the consequences thereof."',
     plain:
-      '大白话：汉密尔顿走的是一条避让的行车线（虽然他的位置确实把维斯塔潘逼上了路肩）；关键是，维斯塔潘直到 1 号弯入口深处都远未与汉密尔顿并排——这个进攻发起得太晚，他没有资格要求"赛车空间"。汉密尔顿本可以离路肩更远一点，但他的位置是合理的。所以主要怪维斯塔潘。另外干事特意声明：量刑只看动作本身，不考虑后果（即"两败俱伤"不会加重处罚）。',
+      '通俗解读：汉密尔顿走的是一条避让的行车线（虽然他的位置确实把维斯塔潘逼上了路肩）；关键是，维斯塔潘直到 1 号弯入口深处都远未与汉密尔顿并排——这个进攻发起得太晚，他没有资格要求"赛车空间"。汉密尔顿本可以离路肩更远一点，但他的位置是合理的。所以主要怪维斯塔潘。另外干事特意声明：量刑只看动作本身，不考虑后果（即"两败俱伤"不会加重处罚）。',
     rules: [
       '为什么罚退 3 位而不是罚时 10 秒？两人都当场退赛，罚时已经没有意义，所以处罚顺延到下一站（索契）以发车罚退形式执行——这和银石时汉密尔顿继续比赛、罚时 10 秒的逻辑一致：干事试图让两种处罚的"实际代价"相当。',
       '"主要责任（predominantly）"而非"全部责任（wholly）"：干事同时点出汉密尔顿"本可以离路肩更远"，只是他的位置"合理"，所以处罚档位偏轻（罚退 3 位是"造成碰撞"的起步档）。',

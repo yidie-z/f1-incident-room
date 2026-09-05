@@ -331,7 +331,7 @@ export const content: IncidentContent = {{
     {zone_line}
     lapWindow: [{lw0}, {lw1}],
     narrative: 'TODO: 用遥测讲一遍事故经过（图表下方解读）',
-    caveat: '遥测为公开计时数据插值，不含方向盘转角，无法单独裁定"刹车区变线"类争议。',
+    caveat: '遥测为公开计时数据插值，不含方向盘转角，无法单独裁定"刹车区变线"类争论。',
   }},
   complete: false,
 }};

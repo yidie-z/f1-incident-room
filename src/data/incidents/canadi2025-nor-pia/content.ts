@@ -221,7 +221,7 @@ export const content: IncidentContent = {
     original:
       '"Car 4 was attempting to overtake Car 81 on the main straight. He attempted to move to the left of Car 81 but there was no space. The driver of Car 4 said that he thought there might be space but realised too late that there was not and he collided with Car 81. While Car 4 sustained damage and retired from the race (but was nonetheless classified in the results), Car 81 was not damaged. The Stewards determined that the driver of Car 4 was solely to blame for the collision. Because the collision had no immediate and obvious sporting consequence, we imposed a 5-second post-race time penalty on Car 4."',
     plain:
-      '大白话：你想在主直道从左边超你的队友，但那里根本没有空间——你自己也承认"以为有空间，发现没有时已经太晚"。所以全责在你。但是：你撞废的是自己的车，队友毫发无损、第 4 名完赛，这次碰撞没有毁掉任何别人的比赛——所以只象征性地赛后追加 5 秒（你已经退赛了，这 5 秒实际等于没罚），驾照分也不扣。',
+      '通俗解读：你想在主直道从左边超你的队友，但那里根本没有空间——你自己也承认"以为有空间，发现没有时已经太晚"。所以全责在你。但是：你撞废的是自己的车，队友毫发无损、第 4 名完赛，这次碰撞没有毁掉任何别人的比赛——所以只象征性地赛后追加 5 秒（你已经退赛了，这 5 秒实际等于没罚），驾照分也不扣。',
     rules: [
       '为何是 5 秒而不是 10 秒：造成碰撞的基准处罚是 10 秒 + 扣 2 分，但干事明文以"没有对其他车手产生直接明显的竞技后果"为由从轻——因为皮亚斯特里的车完全没受损。',
       '为何退赛了还能罚时：按规则，退赛车手的罚时通常转换为下一站罚退；但诺里斯完成了超过 90% 的赛程，被正式"列入成绩"（第 18 名），所以只能追加罚时，无法转换。',
