@@ -1,4 +1,5 @@
 import type { IncidentContent, Statement, Camp } from '../data/types';
+import { campLabel } from '../data/camps';
 import { ExternalLink, Swords } from 'lucide-react';
 
 interface Column {
@@ -15,13 +16,13 @@ export default function PovSection({ incident }: { incident: IncidentContent }) 
   const columns: Column[] = [
     {
       camp: 'a',
-      title: `${incident.campNames.a.split('/')[0].trim()} · 视角`,
+      title: `${campLabel(incident, 'a')} · 视角`,
       subtitle: '这一阵营的控诉点与降温过程',
       items: protagonists.filter((s) => s.camp === 'a'),
     },
     {
       camp: 'b',
-      title: `${incident.campNames.b.split('/')[0].trim()} · 视角`,
+      title: `${campLabel(incident, 'b')} · 视角`,
       subtitle: '这一阵营的辩护逻辑与后续表态',
       items: protagonists.filter((s) => s.camp === 'b'),
     },

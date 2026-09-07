@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { IncidentContent, Statement, Camp } from '../data/types';
 import { phaseLabels } from '../data/types';
+import { campLabel } from '../data/camps';
 import { ExternalLink, Quote, Radio, Flag, Users, MessageSquare, Snowflake } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
@@ -95,8 +96,8 @@ export default function TimelineSection({ incident }: { incident: IncidentConten
           {(
             [
               ['all', '全部视角'],
-              ['a', `只看${incident.campNames.a.split('/')[0].trim()}`],
-              ['b', `只看${incident.campNames.b.split('/')[0].trim()}`],
+              ['a', `只看${campLabel(incident, 'a')}`],
+              ['b', `只看${campLabel(incident, 'b')}`],
             ] as const
           ).map(([v, label]) => (
             <button
