@@ -13,6 +13,8 @@ import { content as c4 } from './hungar2026-pia-sai/content';
 import t4 from './hungar2026-pia-sai/telemetry.json';
 import { content as c5 } from './italia2021-ham-ver/content';
 import t5 from './italia2021-ham-ver/telemetry.json';
+import { content as c6 } from './sopaul2022-alo-oco/content';
+import t6 from './sopaul2022-alo-oco/telemetry.json';
 
 export const incidents: { content: IncidentContent; telemetry: TelemetryData }[] = [
   { content: c0, telemetry: t0 as unknown as TelemetryData },
@@ -21,6 +23,7 @@ export const incidents: { content: IncidentContent; telemetry: TelemetryData }[]
   { content: c3, telemetry: t3 as unknown as TelemetryData },
   { content: c4, telemetry: t4 as unknown as TelemetryData },
   { content: c5, telemetry: t5 as unknown as TelemetryData },
+  { content: c6, telemetry: t6 as unknown as TelemetryData },
 ];
 
 export function getIncident(slug: string) {
