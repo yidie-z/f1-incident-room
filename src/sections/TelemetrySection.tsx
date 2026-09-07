@@ -107,7 +107,7 @@ export default function TelemetrySection({
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex items-center gap-3">
           <Activity className="h-6 w-6 text-[#E10600]" />
-          <h2 className="text-3xl font-bold text-white">铁证面板 · 真实遥测</h2>
+          <h2 className="text-3xl font-bold text-white">证据面板 · 真实遥测</h2>
         </div>
         <p className="mt-2 max-w-3xl text-sm text-zinc-400">
           数据来自 FastF1（F1 官方计时与车载数据）。不看任何一方的嘴，只看两台车自己"说"了什么。

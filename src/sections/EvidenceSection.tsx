@@ -7,7 +7,7 @@ export default function EvidenceSection({ decision }: { decision?: FiaDecision }
     <section className="mx-auto max-w-6xl px-6 py-16">
       <div className="flex items-center gap-3">
         <Gavel className="h-6 w-6 text-[#E10600]" />
-        <h2 className="text-3xl font-bold text-white">铁证面板 · FIA 官方判决书</h2>
+        <h2 className="text-3xl font-bold text-white">证据面板 · FIA 官方判决书</h2>
       </div>
       <p className="mt-2 text-sm text-zinc-400">{decision.docName}</p>
 

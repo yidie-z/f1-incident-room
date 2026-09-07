@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { incidents } from '../data/incidents';
 import { Link } from 'react-router';
-import { ChevronRight, Flag, MapPin, Calendar, PlusCircle } from 'lucide-react';
+import { ChevronRight, Flag, MapPin, Calendar } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import AddEventPanel from '../components/AddEventPanel';
 
@@ -46,7 +46,7 @@ export default function Home() {
             F1 INCIDENT ROOM
           </Badge>
           <h1 className="mt-6 text-4xl font-black tracking-tight text-white md:text-5xl">
-            同一场碰撞，<span style={{ color: '#E10600' }}>两种真相</span>。
+            碰撞只有一瞬，<span style={{ color: '#E10600' }}>故事不止一面</span>。
           </h1>
           <p className="mt-4 max-w-2xl text-zinc-400">
             针对 F1 赛场事件的多视角情报室：时间轴、阵营对峙、FIA 判决书通俗解读、FastF1
@@ -105,24 +105,7 @@ export default function Home() {
           ))}
         </div>
 
-        {apiAvailable ? (
-          <AddEventPanel />
-        ) : (
-          <div className="mt-12 rounded-xl border border-white/10 bg-black/40 p-5 opacity-75">
-            <div className="flex items-center gap-2 text-sm font-semibold text-zinc-400">
-              <PlusCircle className="h-4 w-4 text-zinc-600" />
-              生成新事件页（当前打开方式不可用）
-            </div>
-            <p className="mt-3 text-xs leading-relaxed text-zinc-500">
-              本页面所有事件已打包在内，可随意浏览、断网可用。但「生成新事件」需要实时调用
-              FastF1 官方计时数据 + Python 生成器，静态 HTML（双击打开或用 Kimi
-              预览打开文件）做不到。想生成新事件：用 Kimi Work 的网页预览（localhost
-              开发服务器）打开本项目，或在项目目录运行
-              <code className="mx-1 rounded bg-white/10 px-1.5 py-0.5 text-zinc-300">npm run dev</code>
-              ，首页底部的生成面板即可使用——当然也可以直接叫我来生成。
-            </p>
-          </div>
-        )}
+        {apiAvailable && <AddEventPanel />}
       </main>
 
       <footer className="mx-auto max-w-6xl px-6 py-10 text-xs leading-relaxed text-zinc-600">
