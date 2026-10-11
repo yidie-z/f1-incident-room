@@ -41,7 +41,7 @@ export default function PovSection({ incident }: { incident: IncidentContent }) 
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="flex items-center gap-3">
           <Swords className="h-6 w-6 text-[#E10600]" />
-          <h2 className="text-3xl font-bold text-white">阵营对峙</h2>
+          <h2 className="text-3xl font-bold text-white">两种声音</h2>
         </div>
         <p className="mt-2 max-w-3xl text-sm text-zinc-400">
           同一场事故，三套叙事。左右两栏是两边的辩护与控诉，中间没有的"真相"，
