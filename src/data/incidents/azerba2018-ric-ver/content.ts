@@ -187,6 +187,7 @@ export const content: IncidentContent = {
     plain:
       '通俗解读：维斯塔潘防守时变了两次线——干事认定事故"起因"在他，但两次变线都"相对轻微"；里卡多自己承认往内线抽头的时机太晚，也"促成了事故"。所以结论是一人一半：各记一次训斥。听证会上，两人都对各自的责任表示了悔意。',
     rules: [
+      '条款依据：2018 年规则体系下，干事按 FIA《国际运动法典》附录 L 第 IV 章"驾驶行为准则"认定双方共同造成碰撞，处以处罚阶梯中最低档的训斥（reprimand）。公开报道未转引本案的具体条款编号；报道中引用的"单赛季累计 3 次训斥（至少 2 次与驾驶相关）自动罚退 10 位发车"出自当年 F1 运动规则。',
       '训斥（reprimand）是 FIA 处罚体系里最轻的一档，但有累积效应：单赛季累计 3 次（其中至少 2 次与驾驶相关）自动罚退 10 位发车。这是两人 2018 赛季的第一次训斥。',
       '为什么没有罚时或罚退？双双退赛已经是最大的"自然惩罚"，加上责任均摊、两人当场认错，干事选择了最低档。两人也因此逃过了下一站西班牙站的罚退。',
       '真正重的处罚来自车队内部：霍纳要求两人回米尔顿凯恩斯工厂向全体员工正式道歉——对车手来说，"向 800 名造车的人低头"比扣 2 分难堪得多。',
@@ -195,6 +196,10 @@ export const content: IncidentContent = {
       {
         label: 'Sky Sports（裁决全文）',
         url: 'https://www.skysports.com/f1/news/12433/11352821/max-verstappen-daniel-ricciardo-reprimanded-for-all-red-bull-azerbaijan-gp-crash',
+      },
+      {
+        label: 'ESPN（裁决报道与训斥规则转引）',
+        url: 'https://www.espn.com/f1/story/_/id/23356428/max-verstappen-daniel-ricciardo-reprimanded-fia-stewards',
       },
       {
         label: 'RaceFans（裁决转引与霍纳表态）',

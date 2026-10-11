@@ -305,6 +305,7 @@ export const content: IncidentContent = {
     plain:
       '通俗解读：进弯时维斯塔潘在前、汉密尔顿稍后但已经并排在内线；汉密尔顿的行车线够不到弯心（内侧其实还有空间可以收得更紧），维斯塔潘拐进弯心时，汉密尔顿没有避开接触——所以这次主要怪汉密尔顿，但不是全怪他。',
     rules: [
+      '条款依据：FIA《国际运动法典》附录 L 第 IV 章第 2 条 d)——原文 "Causing a collision, repetition of serious mistakes or the appearance of a lack of control over the car (such as leaving the track) will be reported to the stewards and may entail the imposition of penalties up to and including the disqualification of any driver concerned"（造成碰撞、重复严重失误或显得对赛车失去控制，将被上报赛事干事，可处以直至取消资格的处罚）。',
       '"主要责任"和"全部责任"是干事的两种措辞档位：认定"主要（predominantly）"而非"全部（wholly）"，意味着干事也认为维斯塔潘"两车都不让"有间接责任——这是汉密尔顿只被罚 10 秒、而不是通过维修区或停站 10 秒的关键。',
       '10 秒罚时在当时属于"造成碰撞"的常见档位；红牛愤怒的点是：汉密尔顿在维修区受罚后依然夺冠，"等于没罚"——霍纳称之为"不痛不痒的处罚（menial penalty）"。',
       '除罚时外另扣超级驾照 2 分。红牛随后行使复审权要求加罚，但因提交的"新证据"（含让阿尔本开旧车重演走线）被认定为"制造而非发现"，申诉被驳回，处罚维持。',
@@ -313,6 +314,10 @@ export const content: IncidentContent = {
       {
         label: 'Motorsport.com（裁决原文转引）',
         url: 'https://www.motorsport.com/f1/news/fia-explains-hamilton-blame-for-verstappen-collision/6633216/',
+      },
+      {
+        label: 'RaceFans（条款编号与原文转引：附录 L 第 IV 章第 2 条 d)）',
+        url: 'https://www.racefans.net/2021/09/20/who-was-to-blame-for-verstappen-and-hamiltons-collision-at-silverstone/',
       },
       {
         label: 'RaceFans（责任措辞档位解析）',

@@ -310,6 +310,7 @@ export const fiaDecision = {
   plain:
     '通俗解读：诺里斯已经和你并排了（在你左边），你在进弯前又往左挪了一把，把他挤到发生碰撞——所以这次主要怪你。罚 10 秒，驾照扣 2 分。',
   rules: [
+    '条款依据：FIA《国际运动法典》附录 L 第 IV 章第 2 条 d)——"造成碰撞、重复严重失误或显得对赛车失去控制……将被上报赛事干事，可处以直至取消参赛资格的处罚"。本案即按此"造成碰撞"条款定性，属该条款下的标准处理。',
     '为何是 10 秒而不是 5 秒：按当年与各车队确认的《驾驶标准指引》，"造成碰撞"的基准处罚就是 10 秒；5 秒档通常用于"迫使对手驶离赛道"等更轻的违规。',
     '为何扣 2 分：造成碰撞属于超级驾照扣分条款中的标准 2 分档。这 2 分让维斯塔潘 12 个月累计来到 8 分（满 12 分禁赛一场），成为他 2025 年"禁赛危机"的起点之一。',
     '为何没改变名次：维斯塔潘冲线时领先第 6 名霍肯伯格 26 秒，10 秒罚时没能把他罚出第 5——诺里斯阵营"处罚应与后果成比例"的愤怒正源于此。',
@@ -318,6 +319,10 @@ export const fiaDecision = {
     {
       label: 'FOX Sports（裁决原文转引）',
       url: 'https://www.foxsports.com.au/motorsport/formula-one/id-lose-a-lot-of-respect-norris-fumes-over-mad-max-crash-as-all-angles-revealed-talking-points/news-story/1ca71bacdf42bd4c2accf65ea47522ba',
+    },
+    {
+      label: 'The Athletic（条款编号转引：附录 L 第 IV 章第 2 条 d)）',
+      url: 'https://www.nytimes.com/athletic/5870747/2024/10/25/f1-racing-rules-explained-steward-driver/',
     },
     {
       label: 'Sky Sports（扣分记录）',

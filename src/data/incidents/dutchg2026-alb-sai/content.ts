@@ -210,6 +210,7 @@ export const content: IncidentContent = {
     plain:
       '通俗解读：你在 1 号弯内线防守时抱死，把外线的队友撞出比赛——教科书式的"造成碰撞"，按基准罚 10 秒，没有可以从轻的情节。这次和 2025 加拿大站诺里斯撞皮亚斯特里正好相反：那次被撞的车毫发无损，"没有竞技后果"只罚 5 秒；这次阿尔本底板损毁直接退赛，后果实实在在，所以是全额 10 秒。',
     rules: [
+      '条款依据：FIA《国际运动法典》附录 L 第 IV 章第 2 条 d)（2026 年现行编号不变）——"造成碰撞"的基准处罚为 10 秒罚时，本案按基准执行，未认定减轻情节。',
       '为何是 10 秒而不是 5 秒：造成碰撞的基准处罚就是 10 秒；从轻到 5 秒需要"无直接明显的竞技后果"（如 2025 加拿大站），而本站阿尔本因碰撞损伤退赛，不符合从轻条件。',
       '实际影响约等于零：塞恩斯本来就在积分区外，10 秒罚时后仍列第 16 名完赛——罚单是象征性的，真正的损失由阿尔本和车队承担。',
       '队友相撞的追加处理在队内：干事只按规则处罚；车队层面，两人刚续约 2027，双方第一时间互相道歉，车队选择"作为团队向前看"，没有进一步的内部处罚见诸报道。',
@@ -218,6 +219,10 @@ export const content: IncidentContent = {
       {
         label: 'Motorsport.com（处罚与塞恩斯回应）',
         url: 'https://www.motorsport.com/f1/news/carlos-sainz-explains-fair-penalty-for-alex-albon-contact-the-worst-possible-outcome/10848715/',
+      },
+      {
+        label: 'GPFans（2026 年条款编号转引：附录 L 第 IV 章第 2 条 d)）',
+        url: 'https://www.gpfans.com/en/f1-news/1090755/fia-franco-colapinto-punishment-crash-azerbaijan-grand-prix-pierre-gasly-lando-norris/',
       },
       {
         label: 'Coffee Corner Motorsport（FIA 第 64 号文件转引）',
