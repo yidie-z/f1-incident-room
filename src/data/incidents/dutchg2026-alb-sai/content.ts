@@ -14,7 +14,7 @@ export const content: IncidentContent = {
     'FIA 干事裁定：55 号车（塞恩斯）造成碰撞，罚时 10 秒——标准的"造成碰撞"基准处罚，无从轻情节：与 2025 加拿大诺里斯案相反，这次被撞的阿尔本底板损毁退赛，竞技后果实实在在。塞恩斯本人承认"罚得公道"。威廉姆斯连续第六站零分。',
   drivers: { a: 'ALB', b: 'SAI' },
   driverNames: { ALB: '阿尔本', SAI: '塞恩斯' },
-  colors: { a: '#64C4FF', b: '#3D6BFF' },
+  colors: { a: '#64C4FF', b: '#2E5BFF' },
   campNames: { a: '威廉姆斯 / 阿尔本', b: '威廉姆斯 / 塞恩斯' },
   statements: [
     {

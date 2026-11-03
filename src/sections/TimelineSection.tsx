@@ -36,7 +36,7 @@ function StatementCard({ s, incident }: { s: Statement; incident: IncidentConten
       <div className="flex flex-wrap items-center gap-2">
         <span className="inline-block h-2.5 w-2.5 rounded-full" style={{ backgroundColor: color }} />
         <span className="font-semibold text-white">{s.speaker}</span>
-        <span className="text-xs text-zinc-500">{s.role}</span>
+        <span className="text-xs text-zinc-400">{s.role}</span>
         <Badge variant="outline" className="ml-auto border-white/15 text-xs text-zinc-400">
           {s.tone}
         </Badge>
@@ -44,17 +44,17 @@ function StatementCard({ s, incident }: { s: Statement; incident: IncidentConten
       <p className="mt-3 text-sm leading-relaxed text-zinc-200">{s.zh}</p>
       {s.quote && (
         <div className="mt-3 flex gap-2 rounded-lg bg-black/40 p-3">
-          <Quote className="h-4 w-4 shrink-0 text-zinc-600" />
+          <Quote className="h-4 w-4 shrink-0 text-zinc-500" />
           <p className="text-xs italic leading-relaxed text-zinc-400">{s.quote}</p>
         </div>
       )}
-      <div className="mt-3 flex items-center justify-between text-xs text-zinc-500">
+      <div className="mt-3 flex items-center justify-between text-xs text-zinc-400">
         <span>{s.when}</span>
         <a
           href={s.source.url}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1 text-zinc-400 underline-offset-4 transition-colors hover:text-white hover:underline"
+          className="inline-flex items-center gap-1 rounded text-zinc-400 underline-offset-4 transition-colors hover:text-white hover:underline focus-visible:text-white focus-visible:underline focus-visible:outline-none"
         >
           来源：{s.source.label} · {s.source.date}
           <ExternalLink className="h-3 w-3" />
@@ -130,7 +130,7 @@ export default function TimelineSection({ incident }: { incident: IncidentConten
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">{meta.label}</h3>
-                  <p className="text-xs text-zinc-500">{meta.desc}</p>
+                  <p className="text-xs text-zinc-400">{meta.desc}</p>
                 </div>
               </div>
               <div className="ml-[18px] mt-5 space-y-4 border-l border-white/10 pl-8">

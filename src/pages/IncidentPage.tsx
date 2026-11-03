@@ -31,7 +31,7 @@ export default function IncidentPage() {
         <EvidenceSection decision={content.fiaDecision} />
         <TelemetrySection incident={content} data={telemetry} />
       </main>
-      <footer className="mx-auto max-w-6xl px-6 py-10 text-xs leading-relaxed text-zinc-600">
+      <footer className="mx-auto max-w-6xl px-6 py-10 text-xs leading-relaxed text-zinc-400">
         F1 Incident Room · 原型演示。所有引语均摘自公开报道并附原始来源链接；遥测数据来自
         FastF1（F1 官方计时数据）。本站不含任何 FOM 版权影像，仅做文字引用与数据可视化。
       </footer>

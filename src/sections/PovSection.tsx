@@ -1,6 +1,7 @@
 import type { IncidentContent, Statement, Camp } from '../data/types';
 import { campLabel } from '../data/camps';
 import { ExternalLink, Swords } from 'lucide-react';
+import { contrastText } from '@/lib/utils';
 
 interface Column {
   camp: Camp;
@@ -60,7 +61,7 @@ export default function PovSection({ incident }: { incident: IncidentContent }) 
               >
                 <div
                   className="inline-block rounded-full px-3 py-1 text-xs font-bold"
-                  style={{ backgroundColor: color, color: '#0B0E14' }}
+                  style={{ backgroundColor: color, color: contrastText(color) }}
                 >
                   {col.title}
                 </div>
@@ -70,14 +71,14 @@ export default function PovSection({ incident }: { incident: IncidentContent }) 
                     <div key={s.id} className="rounded-xl border border-white/10 bg-black/40 p-4">
                       <div className="flex items-baseline justify-between gap-2">
                         <span className="text-sm font-semibold text-white">{s.speaker}</span>
-                        <span className="shrink-0 text-[10px] text-zinc-500">{s.when}</span>
+                        <span className="shrink-0 text-[10px] text-zinc-400">{s.when}</span>
                       </div>
                       <p className="mt-2 text-xs leading-relaxed text-zinc-300">{s.zh}</p>
                       <a
                         href={s.source.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-2 inline-flex items-center gap-1 text-[11px] text-zinc-500 transition-colors hover:text-white"
+                        className="mt-2 inline-flex items-center gap-1 text-[11px] text-zinc-400 transition-colors hover:text-white"
                       >
                         {s.source.label} <ExternalLink className="h-3 w-3" />
                       </a>

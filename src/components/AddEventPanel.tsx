@@ -55,24 +55,24 @@ export default function AddEventPanel() {
   };
 
   const inputCls =
-    'w-full rounded-lg border border-white/15 bg-black/40 px-3 py-2 text-sm text-white placeholder:text-zinc-600 focus:border-white/40 focus:outline-none';
+    'w-full rounded-lg border border-white/15 bg-black/40 px-3 py-2 text-sm text-white placeholder:text-zinc-500 focus:border-white/60 focus:outline-none';
 
   return (
     <div className="mt-12 rounded-xl border border-white/10 bg-black/40 p-5">
       <button
         onClick={() => setOpen(!open)}
-        className="flex w-full items-center gap-2 text-left text-sm font-semibold text-zinc-200"
+        className="flex w-full items-center gap-2 rounded-lg text-left text-sm font-semibold text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
       >
         <PlusCircle className="h-4 w-4 text-[#E10600]" />
         生成新事件页
-        <span className="ml-auto text-zinc-600">
+        <span className="ml-auto text-zinc-500">
           {open ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
         </span>
       </button>
 
       {open && (
         <div className="mt-4 space-y-4">
-          <p className="text-xs leading-relaxed text-zinc-500">
+          <p className="text-xs leading-relaxed text-zinc-400">
             分站支持中文、英文、赛道名或分站序号（如 <code className="text-zinc-400">蒙扎</code> /{' '}
             <code className="text-zinc-400">Silverstone</code> / <code className="text-zinc-400">10</code>）；
             车手支持三字母代码、英文全名或中文名（如 <code className="text-zinc-400">HAM</code> /{' '}
@@ -92,14 +92,14 @@ export default function AddEventPanel() {
           <button
             onClick={submit}
             disabled={busy || !year || !gp || !a || !b}
-            className="inline-flex items-center gap-2 rounded-lg bg-[#E10600] px-4 py-2 text-sm font-semibold text-white transition-opacity disabled:opacity-40"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#E10600] px-4 py-2 text-sm font-semibold text-white transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 disabled:opacity-40"
           >
             {busy && <Loader2 className="h-4 w-4 animate-spin" />}
             {busy ? '正在抓取数据并生成页面…' : '生成事件页'}
           </button>
           {error && <p className="text-xs text-red-400">{error}</p>}
           {log && (
-            <details className="text-xs text-zinc-500">
+            <details className="text-xs text-zinc-400">
               <summary className="cursor-pointer hover:text-zinc-300">生成日志</summary>
               <pre className="mt-2 max-h-48 overflow-auto rounded-lg bg-black/60 p-3 whitespace-pre-wrap">{log}</pre>
             </details>

@@ -26,7 +26,7 @@ export default function EvidenceSection({ decision }: { decision?: FiaDecision }
                 href={s.url}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 text-xs text-zinc-500 transition-colors hover:text-white"
+                className="flex items-center gap-1.5 rounded text-xs text-zinc-400 transition-colors hover:text-white focus-visible:text-white focus-visible:outline-none"
               >
                 <ExternalLink className="h-3 w-3" /> {s.label}
               </a>

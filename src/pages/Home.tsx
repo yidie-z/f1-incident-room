@@ -3,6 +3,7 @@ import { incidents } from '../data/incidents';
 import { Link } from 'react-router';
 import { ChevronRight, Flag, MapPin, Calendar } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { contrastText } from '@/lib/utils';
 import AddEventPanel from '../components/AddEventPanel';
 
 /**
@@ -61,7 +62,7 @@ export default function Home() {
             <Link
               key={content.slug}
               to={`/i/${content.slug}`}
-              className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-white/30 hover:bg-white/[0.06]"
+              className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-white/30 hover:bg-white/[0.06] focus-visible:border-white/60 focus-visible:bg-white/[0.06] focus-visible:outline-none"
             >
               <div className="flex items-center gap-2">
                 {!content.complete && (
@@ -69,12 +70,12 @@ export default function Home() {
                     骨架 · 待补充
                   </Badge>
                 )}
-                <span className="ml-auto text-zinc-600 transition-transform group-hover:translate-x-1 group-hover:text-white">
+                <span className="ml-auto text-zinc-500 transition-transform group-hover:translate-x-1 group-hover:text-white">
                   <ChevronRight className="h-5 w-5" />
                 </span>
               </div>
               <h2 className="mt-3 text-xl font-bold text-white">{content.title}</h2>
-              <div className="mt-3 flex flex-wrap gap-3 text-xs text-zinc-500">
+              <div className="mt-3 flex flex-wrap gap-3 text-xs text-zinc-400">
                 <span className="inline-flex items-center gap-1">
                   <Flag className="h-3.5 w-3.5" /> {content.event}
                 </span>
@@ -89,14 +90,14 @@ export default function Home() {
               <div className="mt-4 flex gap-2">
                 <span
                   className="rounded-full px-2.5 py-0.5 text-[10px] font-bold"
-                  style={{ backgroundColor: content.colors.a, color: '#0B0E14' }}
+                  style={{ backgroundColor: content.colors.a, color: contrastText(content.colors.a) }}
                 >
                   {content.drivers.a}
                 </span>
-                <span className="text-[10px] text-zinc-600">vs</span>
+                <span className="text-[10px] text-zinc-400">vs</span>
                 <span
                   className="rounded-full px-2.5 py-0.5 text-[10px] font-bold"
-                  style={{ backgroundColor: content.colors.b, color: '#0B0E14' }}
+                  style={{ backgroundColor: content.colors.b, color: contrastText(content.colors.b) }}
                 >
                   {content.drivers.b}
                 </span>
@@ -108,7 +109,7 @@ export default function Home() {
         {apiAvailable && <AddEventPanel />}
       </main>
 
-      <footer className="mx-auto max-w-6xl px-6 py-10 text-xs leading-relaxed text-zinc-600">
+      <footer className="mx-auto max-w-6xl px-6 py-10 text-xs leading-relaxed text-zinc-400">
         F1 Incident Room · 原型。引语摘自公开报道并附来源链接；遥测来自 FastF1（F1
         官方计时数据）。不含任何 FOM 版权影像。
       </footer>

@@ -16,7 +16,7 @@ export default function Hero({ incident }: { incident: IncidentContent }) {
       <div className="relative mx-auto max-w-6xl px-6 py-16">
         <Link
           to="/"
-          className="mb-6 inline-flex items-center gap-1.5 text-xs text-zinc-500 transition-colors hover:text-white"
+          className="mb-6 inline-flex items-center gap-1.5 rounded text-xs text-zinc-400 transition-colors hover:text-white focus-visible:text-white focus-visible:outline-none"
         >
           <ArrowLeft className="h-3.5 w-3.5" /> 全部事件
         </Link>

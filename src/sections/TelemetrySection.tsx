@@ -127,7 +127,7 @@ export default function TelemetrySection({
           <h3 className="text-sm font-semibold text-white">
             圈速对比 · 第 {lapLo}–{lapHi} 圈
           </h3>
-          <p className="mt-1 text-xs text-zinc-500">
+          <p className="mt-1 text-xs text-zinc-400">
             事故发生在第 {incidentLap} 圈（图中红区）。圈速的同步暴涨通常意味着碰撞/爆胎/进站。
           </p>
           <div className="mt-4 h-72" ref={chart1.ref}>
@@ -140,7 +140,7 @@ export default function TelemetrySection({
                 labelFormatter={(v) => `第 ${v} 圈`}
                 formatter={((v: any, name: any) => [v == null ? '—' : `${Number(v).toFixed(3)}s`, name]) as any}
               />
-              <Legend wrapperStyle={{ fontSize: 12 }} />
+              <Legend wrapperStyle={{ fontSize: 12 }} formatter={(v: any) => <span style={{ color: '#A1A1AA' }}>{v}</span>} />
               <ReferenceLine x={incidentLap} stroke="#E10600" strokeOpacity={0.6} label={{ value: '事故圈', fill: '#FF6B66', fontSize: 11, position: 'insideTop' }} />
               <Line type="monotone" dataKey={A} stroke={colorA} strokeWidth={2.5} dot={{ r: 3 }} name={`${nameA} ${A}`} connectNulls />
               <Line type="monotone" dataKey={B} stroke={colorB} strokeWidth={2.5} dot={{ r: 3 }} name={`${nameB} ${B}`} connectNulls />
@@ -154,7 +154,7 @@ export default function TelemetrySection({
               第 {lapA?.lap ?? lapB?.lap} 圈 · {notes?.zoneLabel ?? '事故区段'}放大
             </h3>
             {notes?.narrative && (
-              <p className="mt-1 text-xs leading-relaxed text-zinc-500">{notes.narrative}</p>
+              <p className="mt-1 text-xs leading-relaxed text-zinc-400">{notes.narrative}</p>
             )}
             <div className="mt-4 h-80" ref={chart2.ref}>
               <LineChart width={chart2.width} height={320} data={zoneRows} margin={{ top: 8, right: 12, bottom: 4, left: -12 }}>
@@ -170,7 +170,7 @@ export default function TelemetrySection({
                     return [v == null ? '—' : `${v} km/h`, name];
                   }) as any}
                 />
-                <Legend wrapperStyle={{ fontSize: 12 }} />
+                <Legend wrapperStyle={{ fontSize: 12 }} formatter={(v: any) => <span style={{ color: '#A1A1AA' }}>{v}</span>} />
                 {notes?.contactZone && (
                   <ReferenceArea
                     yAxisId="spd" x1={notes.contactZone[0]} x2={notes.contactZone[1]}
@@ -185,7 +185,7 @@ export default function TelemetrySection({
               </LineChart>
             </div>
             {notes?.caveat && (
-              <p className="mt-3 text-[11px] leading-relaxed text-zinc-600">注：{notes.caveat}</p>
+              <p className="mt-3 text-[11px] leading-relaxed text-zinc-400">注：{notes.caveat}</p>
             )}
           </div>
         )}
