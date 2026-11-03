@@ -3,7 +3,7 @@ import { Activity } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import {
   LineChart, Line, XAxis, YAxis, Tooltip, Legend,
-  ReferenceArea, CartesianGrid,
+  ReferenceArea, ReferenceLine, CartesianGrid,
 } from 'recharts';
 
 /** 测量容器宽度；测不到（如隐藏视口）时用 960 兜底，保证图表始终渲染 */
@@ -25,15 +25,21 @@ function useContainerWidth() {
   return { ref, width: w || 960 };
 }
 
-function interp(lap: TelLap, d: number, key: 'speed' | 'brake'): number | null {
-  const { dist } = lap;
-  if (d < dist[0] || d > dist[dist.length - 1]) return null;
+/** 生成一个沿距离采样的插值器：采样点单调递增，指针留原地续扫，整体 O(n)，一次取值同时返回车速和刹车 */
+function makeSampler(lap: TelLap) {
   let i = 0;
-  while (i < dist.length - 1 && dist[i + 1] < d) i++;
-  const d0 = dist[i], d1 = dist[i + 1] ?? d0;
-  const v0 = lap[key][i], v1 = lap[key][i + 1] ?? v0;
-  const t = d1 === d0 ? 0 : (d - d0) / (d1 - d0);
-  return v0 + (v1 - v0) * t;
+  const { dist } = lap;
+  return (d: number): { speed: number; brake: number } | null => {
+    if (d < dist[0] || d > dist[dist.length - 1]) return null;
+    while (i < dist.length - 1 && dist[i + 1] < d) i++;
+    const d0 = dist[i], d1 = dist[i + 1] ?? d0;
+    const t = d1 === d0 ? 0 : (d - d0) / (d1 - d0);
+    const pick = (arr: number[]) => {
+      const v0 = arr[i], v1 = arr[i + 1] ?? v0;
+      return v0 + (v1 - v0) * t;
+    };
+    return { speed: pick(lap.speed), brake: pick(lap.brake) };
+  };
 }
 
 const tooltipStyle = {
@@ -72,9 +78,9 @@ export default function TelemetrySection({
     }
     lapRows.push(row);
   }
-  const allTimes = data.lapTimes.map((x) => x.time).filter((t): t is number => t !== null);
-  const tMin = Math.floor(Math.min(...allTimes)) - 1;
-  const tMax = Math.ceil(Math.max(...allTimes)) + 3;
+  const winTimes = lapRows.flatMap((r) => [r[A], r[B]]).filter((t): t is number => t != null);
+  const tMin = Math.floor(Math.min(...winTimes)) - 1;
+  const tMax = Math.ceil(Math.max(...winTimes)) + 3;
 
   // 图 2：事故圈弯道区段
   const lapA = data.telemetry[A]?.find((l) => l.lap === incidentLap)
@@ -87,13 +93,17 @@ export default function TelemetrySection({
     Abrake: number | null; Bbrake: number | null;
   }[] = [];
   if (lapA || lapB) {
+    const sampleA = lapA ? makeSampler(lapA) : null;
+    const sampleB = lapB ? makeSampler(lapB) : null;
     for (let d = win[0]; d <= win[1]; d += 8) {
+      const a = sampleA?.(d) ?? null;
+      const b = sampleB?.(d) ?? null;
       zoneRows.push({
         dist: Math.round(d),
-        Aspeed: lapA ? interp(lapA, d, 'speed') : null,
-        Bspeed: lapB ? interp(lapB, d, 'speed') : null,
-        Abrake: lapA ? interp(lapA, d, 'brake') : null,
-        Bbrake: lapB ? interp(lapB, d, 'brake') : null,
+        Aspeed: a?.speed ?? null,
+        Bspeed: b?.speed ?? null,
+        Abrake: a?.brake ?? null,
+        Bbrake: b?.brake ?? null,
       });
     }
     for (const r of zoneRows) {
@@ -131,7 +141,7 @@ export default function TelemetrySection({
                 formatter={((v: any, name: any) => [v == null ? '—' : `${Number(v).toFixed(3)}s`, name]) as any}
               />
               <Legend wrapperStyle={{ fontSize: 12 }} />
-              <ReferenceArea x1={incidentLap} x2={incidentLap} stroke="none" fill="#E10600" fillOpacity={0.12} label={{ value: '事故圈', fill: '#FF6B66', fontSize: 11, position: 'insideTop' }} />
+              <ReferenceLine x={incidentLap} stroke="#E10600" strokeOpacity={0.6} label={{ value: '事故圈', fill: '#FF6B66', fontSize: 11, position: 'insideTop' }} />
               <Line type="monotone" dataKey={A} stroke={colorA} strokeWidth={2.5} dot={{ r: 3 }} name={`${nameA} ${A}`} connectNulls />
               <Line type="monotone" dataKey={B} stroke={colorB} strokeWidth={2.5} dot={{ r: 3 }} name={`${nameB} ${B}`} connectNulls />
             </LineChart>

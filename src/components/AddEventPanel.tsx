@@ -15,6 +15,12 @@ export default function AddEventPanel() {
   const navigate = useNavigate();
 
   const submit = async () => {
+    const yearNum = Number(year);
+    const lapNum = lap.trim() ? Number(lap) : undefined;
+    if (!Number.isInteger(yearNum) || (lapNum !== undefined && (!Number.isInteger(lapNum) || lapNum < 1))) {
+      setError('年份和事故圈需要填写整数（事故圈可留空，留空则自动侦测）');
+      return;
+    }
     setBusy(true);
     setError(null);
     setLog(null);
@@ -23,11 +29,11 @@ export default function AddEventPanel() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          year: Number(year),
+          year: yearNum,
           gp: gp.trim(),
           a: a.trim(),
           b: b.trim(),
-          lap: lap.trim() ? Number(lap) : undefined,
+          lap: lapNum,
         }),
       });
       const data = await res.json();
